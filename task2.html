@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Table OnClick</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-sm-12">
+        <table
+          id="table"
+          border="2"
+          cellspacing="2"
+          align="center"
+          class="table table-striped"
+        >
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+          </tr>
+          <tr id="1" onclick="myfunc('1')">
+            <td id="11"><input value="raj"></td>
+            <td id="12"><input type="text" value="project manager"></td>
+          </tr>
+          <tr id="2" onclick="myfunc('2')">
+            <td id="21"><input type="text" value="arun"></td>
+            <td id="22"><input type="text" value="project lead"></td>
+          </tr>
+          <tr id="3" onclick="myfunc('3')">
+            <td id="31"><input type="text" value="akaash"></td>
+            <td id="32"><input type="text" value="team leader"></</td>
+          </tr>
+          <tr id="4" onclick="myfunc('4')">
+            <td id="41"><input type="text" value="athiban"></td>
+            <td id="42"><input type="text" value="module leader"></td>
+          </tr>
+          <tr id="5" onclick="myfunc('5')">
+            <td id="51"><input type="text" value="gowtham"></td>
+            <td id="52"><input type="text" value="senior engineer"></td>
+          </tr>
+          <tr id="6" onclick="myfunc('6')">
+            <td id="61">Babu</td>
+            <td id="62">Project Trainee</td>
+          </tr>
+          <tr id="7" onclick="myfunc('7')">
+            <td id="71">Hariharan</td>
+            <td id="72">Quality Analyst</td>
+          </tr>
+          <tr id="8" onclick="myfunc('8')">
+            <td id="81">Jeyakumar</td>
+            <td id="82">Architect</td>
+          </tr>
+          <tr>
+              <td>
+                <input type="text" name="tname" id="tname"/>
+              </td>
+              <td>
+                <input type="text" name="trole" id="trole" />
+              </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script>
+      function myfunc(id) {
+        var id1 = id + "1";
+        var id2 = id + "2";
+        var data1 = document.getElementById(id1).innerHTML;
+        var data2 = document.getElementById(id2).innerHTML;
+        console.log(data1);
+        document.getElementById("tname").value = data1;
+        document.getElementById("trole").value = data2;
+      }
+    </script>
+  </body>
+</html>
